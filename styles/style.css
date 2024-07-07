@@ -1,0 +1,144 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+    --color-primario:#000000;
+    --color-secundario:#f6f6f6;
+    --color-terciaio:#22D4FD;
+    --color-four:#272727;
+
+    --fuente-montserrat:"Montserrat", sans-serif;
+    --fuente-krona:"Krona One", sans-serif;
+    --tamano-fuente:1.5rem;
+    --tamano-fuente-titulo:2.25rem;/*el rem correspode a 16px*/
+}
+
+*{/*cuando solo sepone asterisco nos funciana todo el css */
+    padding:0;
+    margin: 0;
+}
+
+
+body{
+    background-color: var(--color-primario);
+    color:var(--color-secundario);
+    box-sizing: border-box;
+}
+
+.header{
+    padding: 2% 0% 0% 15%;
+}
+
+.header_menu{
+    display: flex;
+    gap: 80px;/*espcacio entre los cuadros de texto "p"*/
+}
+
+.header_menu_link{
+    font-family:var(--fuente-montserrat);
+    font-size: var(--tamano-fuente);
+    color: var(--color-terciaio);
+    font-weight: 600;
+    text-decoration: none;/*conto quitamos la lineas de abojo de los hiberbinculos*/
+}
+
+.presentacion{
+    display: flex;
+    align-items: center;
+    margin: 6% 15%;
+    justify-content: space-between;/*espacio entre los cuadros */
+}
+
+.presentacion_contemido{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.presentacion_contemido_titulo{
+    font-size: var(--tamano-fuente-titulo);
+    font-family: var(--fuente-krona);
+}
+.titulo-destaque{
+    color:var(--color-terciaio);
+
+}
+
+.presentacion_contemido_texto{
+    font-size: var(--tamano-fuente);
+    font-family:var(--fuente-montserrat);
+}
+
+.presentacion_enlaces{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column; /*Posicionamieno item en en columna por defecto esta en fila */
+    align-items: center; /*se usa cuando esta en en coluna */
+    gap: 32px; /*agrega espacios iguales entre cada cuadrado*/
+}
+
+.presentacion_enlaces_link{
+    width: 50%;
+    text-align: center;
+    padding: 21.5px 0;
+    border-radius: 8px;
+    font-family: var(--fuente-montserrat);
+    font-size: var(--tamano-fuente);
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--color-secundario);
+    border: 2px solid var(--color-terciaio);/* primro el grosor, forma y color */
+    display: flex;
+    justify-content: center ;/*funciona por que esta en el ese orizontal */
+}
+
+.presentacion_enlaces_subtitulo{
+    font-family:'krona One',sans serif;
+    font-size: var(--tamano-fuente);
+    font-weight: 400;
+}
+
+.presentacion_enlaces_link:hover{
+    background-color:var(--color-four);
+}
+
+.presentacion_img{
+    width: 50%;/*con esto definimos el tamano respecto a pantalla*/
+    
+}
+
+.footer{
+    background-color: var(--color-terciaio);
+    padding: 24px;
+    color: var(--color-primario);
+    text-align: center;/*sirve para dar la orientacion a las textos */
+    font-family:var(--fuente-montserrat);
+    font-size: var(--tamano-fuente);/*tamañano de la letra*/
+    font-weight: 500;/*forma de la negrilla*/
+}
+
+
+@media(max-width:1200px){/*compartamiento de la pantalla cuando disminuye el tamaño*/
+
+    .header{
+        padding: 10% ;
+    }
+
+    .header_menu{
+        justify-content: center;
+    }
+
+    .presentacion{
+        flex-direction: column-reverse;/* con esto le damos la forma de columna 
+        pero tambien reverse cambio las cosas que estan arriba abojo */
+        padding: 5%;
+       margin: 0%;
+        
+    }
+
+    .presentacion_contemido{
+        width: auto;
+    }
+}
+    
